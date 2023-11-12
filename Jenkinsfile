@@ -5,6 +5,7 @@ pipeline {
             steps {
                 sh '''
                 cd project
+                pwd
                 gradle build
                 '''
             }
@@ -13,6 +14,7 @@ pipeline {
             steps {
             sh '''
             pwd
+            cd project
             '''
             }
 
