@@ -15,6 +15,7 @@ pipeline {
             sh '''
             pwd
             cd project
+            docker build -t JenkinsSandbox:1.0 .
             '''
             }
 
