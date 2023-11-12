@@ -1,21 +1,21 @@
 pipeline {
     agent { docker { image 'gradle:latest' } }
     stages {
-        stage('version check') {
-            steps {
-                sh 'gradle --version'
-            }
-        }
-        stage('build') {
+        stage('application build') {
             steps {
                 sh '''
-                pwd
                 cd project
                 gradle build
-                cd ..
-                pwd
                 '''
             }
+        }
+        stage('docker image build'){
+            steps {
+            sh '''
+            pwd
+            '''
+            }
+
         }
     }
     post {
