@@ -8,7 +8,10 @@ pipeline {
         }
         stage('build') {
             steps {
-                sh 'gradle build'
+                sh '''
+                cd project
+                gradle build
+                '''
             }
         }
     }
