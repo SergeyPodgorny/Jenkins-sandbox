@@ -9,11 +9,11 @@ pipeline {
         stage('build') {
             steps {
                 sh '''
-                echo pwd
+                pwd
                 cd project
                 gradle build
                 cd ..
-                echo pwd
+                pwd
                 '''
             }
         }
